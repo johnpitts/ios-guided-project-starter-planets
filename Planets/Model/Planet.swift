@@ -12,7 +12,7 @@ struct Planet {
     
     init(name: String, imageName: String) {
         self.name = name
-        self.image = UIImage(named: imageName)!
+        self.image = UIImage(named: imageName)! // may crash if planet file is missing
     }
     
     var name: String
