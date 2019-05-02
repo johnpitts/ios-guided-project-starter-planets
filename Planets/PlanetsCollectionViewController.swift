@@ -10,6 +10,12 @@ import UIKit
 
 class PlanetsCollectionViewController: UICollectionViewController {
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        collectionView.reloadData()
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return planetController.planets.count
     }
